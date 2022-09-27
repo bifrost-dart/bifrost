@@ -9,6 +9,7 @@ environment:
 dependencies:
   heimdall:
     path: "../heimdall"
+  ioc_container: ^0.14.0
   # path: ^1.8.0
 
 dev_dependencies:

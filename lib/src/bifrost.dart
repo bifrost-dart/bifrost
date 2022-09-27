@@ -1,10 +1,15 @@
+import 'package:bifrost/common.dart';
 import 'package:heimdall/core.dart';
 
 class Bifrost {
   late Heimdall app;
+  late Module _rootModule;
 
-  Bifrost() {
+  Bifrost(Module mod) {
     app = Heimdall();
+    _rootModule = mod;
+
+    registerModules();
   }
 
   void enableCors() {
@@ -13,6 +18,14 @@ class Bifrost {
 
   Heimdall createPortal() {
     return app;
+  }
+
+  void registerModules() {
+    _rootModule.controller.router;
+
+    this
+        .app
+        .useRouter(_rootModule.controller.name, _rootModule.controller.router);
   }
 
   void listen(int port) {
