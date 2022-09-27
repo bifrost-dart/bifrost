@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library bifrost;
 
-export 'src/bifrost_base.dart';
+export 'src/bifrost.dart';
 
 // TODO: Export any libraries intended for clients of this package.
