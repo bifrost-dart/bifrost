@@ -1,4 +1,6 @@
 library bifrost;
 
-export 'src/module.dart';
-export 'src/controller.dart';
+export 'src/common/module.dart';
+export 'src/common/controller.dart';
+
+export 'src/interfaces/bifrost_module.dart';
